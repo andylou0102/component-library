@@ -1,0 +1,34 @@
+@use 'sass:map';
+
+$font-family: 'Open Sans', 'Roboto';
+
+$font-weight: (
+  'thin': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700
+);
+
+%typo-heading {
+  font-weight: map.get($font-weight, bold);
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 1.5px;
+}
+
+%typo-body {
+  font-weight: map.get($font-weight, regular);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+%typo-button {
+  font-weight: map.get($font-weight, medium);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

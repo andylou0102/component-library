@@ -1,0 +1,52 @@
+@mixin global-setup {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  button,
+  input,
+  textarea {
+    font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body {
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+  }
+
+  input,
+  textarea {
+    border: 0;
+    appearance: none;
+  }
+
+  pre {
+    white-space: pre-line;
+  }
+
+  a {
+    color: var(--color-blue-5);
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  
+    &:not(:disabled):hover {
+      color: var(--color-blue-4);
+    }
+  
+    &:not(:disabled):active {
+      color: var(--color-blue-6);
+    }
+  }
+}
