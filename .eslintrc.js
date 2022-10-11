@@ -3,7 +3,10 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['./.eslintrc-auto-import.json'],
+  extends: [
+    '@frontend-config/eslint-config-vue3',
+    './.eslintrc-auto-import.json',
+  ],
   parserOptions: {
     ecmaVersion: 2020,
     project: './tsconfig.eslint.json',
