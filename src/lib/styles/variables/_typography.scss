@@ -11,24 +11,68 @@ $font-weight: (
   'bold': 700
 );
 
-%typo-heading {
+%typo-heading-1 {
   font-weight: map.get($font-weight, bold);
   font-size: 32px;
   line-height: 38px;
   letter-spacing: 1.5px;
 }
 
-%typo-body {
+%typo-heading-2 {
+  font-weight: map.get($font-weight, bold);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+}
+
+%typo-heading-3 {
+  font-weight: map.get($font-weight, bold);
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+}
+
+%typo-body-1 {
   font-weight: map.get($font-weight, regular);
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.5px;
 }
 
-%typo-button {
+%typo-body-2 {
+  font-weight: map.get($font-weight, regular);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+%typo-body-3 {
+  font-weight: map.get($font-weight, regular);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+
+%typo-button-1 {
   font-weight: map.get($font-weight, medium);
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+%typo-button-2 {
+  font-weight: map.get($font-weight, medium);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+%typo-button-3 {
+  font-weight: map.get($font-weight, medium);
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }

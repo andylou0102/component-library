@@ -1,4 +1,7 @@
 $colors: (
+  --color-white: #fff,
+  --color-black: #080808,
+
   --color-gray-1: #e5e5e5,
   --color-gray-2: #ccc,
   --color-gray-3: #b2b2b2,
@@ -21,7 +24,17 @@ $colors: (
   --color-yellow-9: #3b3212,
   --color-yellow-10: #110d00,
 
-  
+  --color-red-1: #e0d3d1,
+  --color-red-2: #e1b2ab,
+  --color-red-3: #e39186,
+  --color-red-4: #e47060,
+  --color-red-5: #e54f3a,
+  --color-red-6: #bc402f,
+  --color-red-7: #923023,
+  --color-red-8: #692118,
+  --color-red-9: #3f110c,
+  --color-red-10: #160201,
+
   --color-blue-1: #d7e1e2,
   --color-blue-2: #c0dfe2,
   --color-blue-3: #93dbe2,
@@ -30,4 +43,16 @@ $colors: (
   --color-blue-6: #26c0cc,
   --color-blue-7: #21a6b2,
   --color-blue-8: #1c8e99,
+
+  --color-translucent-white-1: rgba(255, 255, 255, 0.08),
+  --color-translucent-white-2: rgba(255, 255, 255, 0.15),
+  --color-translucent-white-3: rgba(255, 255, 255, 0.25),
+  --color-translucent-white-4: rgba(255, 255, 255, 0.3),
+  --color-translucent-white-5: rgba(255, 255, 255, 0.5),
+
+  --color-translucent-black-1: rgba(0, 0, 0, 0.9),
+  --color-translucent-black-2: rgba(0, 0, 0, 0.85),
+  --color-translucent-black-3: rgba(0, 0, 0, 0.8),
+  --color-translucent-black-4: rgba(0, 0, 0, 0.75),
+  --color-translucent-black-5: rgba(0, 0, 0, 0.5),
 )
