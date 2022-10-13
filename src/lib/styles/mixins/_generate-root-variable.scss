@@ -1,0 +1,7 @@
+@mixin generate-root-variable {
+  :root {
+    @each $key, $value in $colors {
+      #{unquote($key)}: $value;
+    }
+  }
+}

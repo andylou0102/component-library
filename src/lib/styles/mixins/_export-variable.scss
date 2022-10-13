@@ -1,0 +1,7 @@
+@mixin export-variable {
+  :export {
+    @each $color in map-keys($colors) {
+      #{$color}: map.get($colors, $color)
+    }
+  }
+}

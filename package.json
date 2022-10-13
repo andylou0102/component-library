@@ -1,0 +1,48 @@
+{
+  "name": "@frontend-ui/component-library",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andylou0102/component-library.git"
+  },
+  "peerDependencies": {
+    "vue": ">=3.2.0"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.2.12",
+    "dayjs": "^1.11.3"
+  },
+  "devDependencies": {
+    "@frontend-config/eslint-config-vue3": "github:andylou0102/frontend-config#eslint-config-vue3@0.0.3",
+    "@nabla/vite-plugin-eslint": "^1.4.0",
+    "@types/lodash": "^4.14.181",
+    "@types/node": "^17.0.15",
+    "@types/tar": "^6.1.1",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vue/compiler-sfc": "^3.2.29",
+    "lodash": "^4.17.21",
+    "bumpp": "^7.1.1",
+    "eslint": "^8.8.0",
+    "husky": "^7.0.4",
+    "sass": "^1.49.7",
+    "tar": "^6.1.11",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.6.4",
+    "unplugin-auto-import": "^0.11.2",
+    "vite": "^3.1.0",
+    "vitepress": "^1.0.0-alpha.19",
+    "vue": "^3.2.40",
+    "vue-tsc": "^0.40.4"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "pnpm run check && vite build && vue-tsc --declaration --emitDeclarationOnly -p tsconfig.build.json",
+    "docs:build": "vitepress build docs",
+    "release": "bumpp package.json --commit --push && node scripts/publish.js",
+    "lint:script": "eslint --fix --ext .ts,.js,.vue src",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.build.json",
+    "check": "run-p lint:script typecheck"
+  },
+  "readme": "# Vue 3 + TypeScript + Vite\n\nThis template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.\n\n## Recommended IDE Setup\n\n- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)\n\n## Type Support For `.vue` Imports in TS\n\nSince TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:\n\n1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.\n2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.\n\nYou can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).\n"
+}
