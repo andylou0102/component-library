@@ -10,6 +10,7 @@
     "dev": "vitepress dev docs",
     "build": "pnpm run check && vite build && vue-tsc --declaration --emitDeclarationOnly -p tsconfig.build.json",
     "docs:build": "vitepress build docs",
+    "release": "bumpp package.json --commit --push && node scripts/publish.js",
     "lint:script": "eslint --fix --ext .ts,.js,.vue src",
     "typecheck": "vue-tsc --noEmit -p tsconfig.build.json",
     "check": "run-p lint:script typecheck"
