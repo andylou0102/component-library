@@ -130,7 +130,7 @@
   .ant-calendar {
     width: auto;
     border: 0;
-    background: var(--color-gray-3);
+    background: var(--color-gray-8);
     box-shadow: 0 4px 10px rgba(58, 178, 189, 0.5);
 
     .ant-calendar-input-wrap {
@@ -185,7 +185,7 @@
 
       .ant-calendar-time-picker-select {
         border-bottom: 1px solid var(--color-gray-3);
-        background-color: var(--color-gray-3);
+        background-color: var(--color-gray-8);
         color: var(--color-gray-3);
 
         &:not(:last-child) {
@@ -203,14 +203,14 @@
 
             &:hover,
             &:focus {
-              background-color: var(--color-gray-2);
+              background-color: var(--color-gray-7);
               color: var(--color-primary-3);
             }
           }
         }
 
         .ant-calendar-time-picker-select-option-selected {
-          background-color: var(--color-gray-2);
+          background-color: var(--color-gray-7);
         }
       }
     }
