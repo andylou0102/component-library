@@ -1,0 +1,47 @@
+.custom-popover {
+  display: block;
+
+  &.-padding-size {
+    &-sm {
+      .ant-popover-inner {
+        padding: 3px 8px;
+      }
+    }
+
+    &-md {
+      .ant-popover-inner {
+        padding: 12px;
+      }
+    }
+  }
+
+  .ant-popover {
+    &-inner {
+      overflow: hidden;
+      border-radius: 5px;
+      background-color: var(--color-gray-8);
+      box-shadow: var(--box-shadows-basic);
+    }
+
+    &-title,
+    &-inner-content {
+      color: var(--color-white);
+    }
+
+    &-title {
+      min-width: auto;
+      min-height: auto;
+      margin-bottom: 4px;
+      padding: 0;
+      border-bottom: 0;
+    }
+
+    &-inner-content {
+      @extend %typo-body-3;
+      padding: 0;
+    }
+  }
+  .ant-popover-arrow-content {
+    background-color: var(--color-gray-8);
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@frontend-ui/component-library",
+  "version": "0.0.2",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andylou0102/component-library.git"
+  },
+  "peerDependencies": {
+    "vue": ">=3.2.0"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.2.12",
+    "dayjs": "^1.11.3"
+  },
+  "devDependencies": {
+    "@frontend-config/eslint-config-vue3": "github:andylou0102/frontend-config#eslint-config-vue3@0.0.3",
+    "@nabla/vite-plugin-eslint": "^1.4.0",
+    "@types/lodash": "^4.14.181",
+    "@types/node": "^17.0.15",
+    "@types/tar": "^6.1.1",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vue/compiler-sfc": "^3.2.29",
+    "lodash": "^4.17.21",
+    "bumpp": "^7.1.1",
+    "eslint": "^8.8.0",
+    "husky": "^7.0.4",
+    "sass": "^1.49.7",
+    "tar": "^6.1.11",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.6.4",
+    "unplugin-auto-import": "^0.11.2",
+    "vite": "^3.1.0",
+    "vitepress": "^1.0.0-alpha.19",
+    "vue": "^3.2.40",
+    "vue-tsc": "^0.40.4",
+    "vue-i18n": "^9.2.2"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "pnpm run check && vite build && vue-tsc --declaration --emitDeclarationOnly -p tsconfig.build.json",
+    "docs:build": "vitepress build docs",
+    "release": "bumpp package.json --commit --push && node scripts/publish.js",
+    "lint:script": "eslint --fix --ext .ts,.js,.vue src",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.build.json",
+    "check": "run-p lint:script typecheck"
+  },
+  "readme": "# Component Library\n- Setting global component, using it as multi-repo\n\n## Requirements\n- NodeJS: v16.13.2\n- [pnpm](https://pnpm.io/): v6.30.0\n- (Optional) [nvm](https://github.com/nvm-sh/nvm) / [fnm](https://github.com/Schniz/fnm)\n  - Node 環境版本管理器\n\n## Project setup\n```sh\n# Switch to correct node version (nvm)\nnvm use\n\n# Switch to correct node version (fnm)\nfnm use\n\n# Install dependencies\npnpm install\n```\n\n### Compiles and hot-reloads for development\n```\npnpm run dev\n```\n\n### Compiles and minifies for production\n```\npnpm run build\n```\n\n### Lints and fixes files\n```\npnpm run lint:script\n```"
+}

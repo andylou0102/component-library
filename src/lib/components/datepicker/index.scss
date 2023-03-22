@@ -1,0 +1,219 @@
+.ant-picker.default-datepicker {
+  &:not(.custom) {
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #3f3f3f;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .ant-picker-input > input {
+    @extend %typo-body-1;
+    border: unset;
+    background-color: transparent;
+    color: #fff;
+      
+    &::placeholder {
+      color: #808080;
+    }
+  }
+
+  .ant-picker-suffix {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    color: var(--color-gray-3);
+    cursor: pointer;
+  }
+
+  .ant-calendar-picker-clear {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .ant-calendar-range-picker-separator {
+    color: var(--color-gray-3);
+  }
+}
+
+.default-datepicker__calendar {
+  table {
+    display: table;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+  
+  tbody {
+    display: table-row-group;
+  }
+  
+  tr {
+    display: table-row;
+  }
+  
+  th,
+  td {
+    display: table-cell;
+  }
+
+  .ant-picker-panel {
+    border: none;
+  }
+  .ant-picker-footer {
+    border-top: 1px solid var(--color-gray-7);
+
+    .ant-picker-today-btn {
+      color: var(--color-blue-5);
+      cursor: pointer;
+    }
+  }
+  
+  .ant-picker-panel-container {
+    width: auto;
+    border: 0;
+    background: var(--color-gray-8);
+    box-shadow: 0 4px 10px rgba(58, 178, 189, 0.5);
+
+    .ant-picker-date-panel {
+      border-radius: 5px;
+
+      .ant-picker-header {
+        @extend %typo-caption-3;
+
+        button {
+          color: var(--color-gray-4);
+          cursor: pointer;
+        }
+
+        .ant-picker-header-view > button {
+          color: var(--color-gray-1);
+        }
+      }
+    }
+
+    .ant-picker-header {
+      border-bottom: 0;
+
+      .ant-picker-month-btn,
+      .ant-picker-year-btn,
+      .ant-picker-decade-btn,
+      .ant-picker-century-btn {
+        pointer-events: none;
+      }
+    }
+
+    .ant-picker-body {
+      padding-top: 0;
+      border-color: var(--color-gray-4);
+    }
+
+    .ant-picker-content {
+      margin: 0;
+
+      thead {
+        tr {
+          border-top: 0;
+        }
+
+        th {
+          @extend %typo-body-2;
+          color: #fff;
+        }
+      }
+
+      tbody {
+        border-top: 1px solid #4d4d4d;
+
+        tr {
+          border: 0;
+
+          &:nth-child(2n) {
+            background-color: transparent;
+          }
+        }
+
+        td {
+          cursor: pointer;
+        }
+      }
+
+      .ant-picker-cell {
+        pointer-events: none;
+        
+
+        &:hover > .ant-picker-cell-inner {
+          border-radius: 50%;
+          padding: 2px;
+          background-color: var(--color-gray-6) !important;
+        }
+        .ant-picker-cell-inner {
+          @extend %typo-body-1;
+          position: relative;
+          height: auto;
+          color: #808080;
+        }
+      }
+
+      .ant-picker-cell-in-view {
+        pointer-events: initial;
+
+        .ant-picker-cell-inner {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-picker-cell-today .ant-picker-cell-inner {
+      z-index: 1;
+      border: 0;
+      background-color: transparent;
+      color: var(--color-white);
+      font-weight: normal;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background: var(--color-gray-6);
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .ant-picker-cell-selected .ant-picker-cell-inner {
+      z-index: 1;
+      background-color: transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #21a6b2;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .ant-picker-disabled-cell {
+    .ant-picker-cell-inner {
+      background: none;
+      color: var(--color-base-gray-5);
+    }
+  }
+}
