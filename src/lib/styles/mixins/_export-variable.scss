@@ -1,7 +1,11 @@
 @mixin export-variable {
   :export {
     @each $color in map-keys($colors) {
-      #{$color}: map.get($colors, $color)
+      #{$color}: map.get($colors, $color);
+    }
+
+    @each $shadow in map-keys($box-shadows) {
+      #{'--box-shadows-' + $shadow}: map.get($box-shadows, $shadow);
     }
   }
 }

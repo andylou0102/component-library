@@ -2,7 +2,7 @@
 import DatePickerPlayground from './DatePickerPlayground.vue'
 </script>
 
-# Button
+# DatePicker
 
 ## Demo
 <DatePickerPlayground />

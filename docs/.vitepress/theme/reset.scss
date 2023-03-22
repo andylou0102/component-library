@@ -13,10 +13,10 @@ script {
   display: none;
 }
 
-*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-  display: revert;
-  all: unset;
-}
+// *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+//   display: revert;
+//   all: unset;
+// }
 
 /* Preferred box-sizing value */
 *,

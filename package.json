@@ -42,7 +42,8 @@
     "vite": "^3.1.0",
     "vitepress": "^1.0.0-alpha.19",
     "vue": "^3.2.40",
-    "vue-tsc": "^0.40.4"
+    "vue-tsc": "^0.40.4",
+    "vue-i18n": "^9.2.2"
   },
   "pnpm": {
     "peerDependencyRules": {

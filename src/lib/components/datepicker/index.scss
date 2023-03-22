@@ -1,55 +1,30 @@
-.default-datepicker.ant-calendar-picker {
+.ant-picker.default-datepicker {
   &:not(.custom) {
     overflow: hidden;
     box-sizing: border-box;
     border: 1px solid #3f3f3f;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.08);
-
-    &.-size {
-      &-sm {
-        .ant-calendar-picker-input {
-          padding: 5px 12px;
-        }
-      }
-
-      &-md {
-        .ant-calendar-picker-input {
-          padding: 8px 12px;
-        }
-      }
-
-      &-lg {
-        .ant-calendar-picker-input {
-          padding: 11px 12px;
-        }
-      }
-    }
   }
 
-  .ant-calendar-picker-input {
+  .ant-picker-input > input {
     @extend %typo-body-1;
-    padding: 8px 12px;
     border: unset;
     background-color: transparent;
     color: #fff;
       
-
     &::placeholder {
       color: #808080;
     }
-      
   }
 
-  .ant-calendar-picker-icon {
-    top: 50%;
+  .ant-picker-suffix {
     display: block;
     width: 18px;
     height: 18px;
     margin-top: 0;
+    color: var(--color-gray-3);
     cursor: pointer;
-    fill: var(--color-gray-3);
-    transform: translateY(-50%);
   }
 
   .ant-calendar-picker-clear {
@@ -86,163 +61,58 @@
     display: table-cell;
   }
 
+  .ant-picker-panel {
+    border: none;
+  }
+  .ant-picker-footer {
+    border-top: 1px solid var(--color-gray-7);
 
-  .ant-calendar-footer {
-    border-top: 1px solid var(--color-gray-4);
-
-    .default-datepicker__calendar-btn {
-      @extend %typo-button-3;
-      display: flex;
-      align-items: center;
-      padding: 12px 0;
-    }
-
-    .ant-calendar-today-btn {
+    .ant-picker-today-btn {
+      color: var(--color-blue-5);
       cursor: pointer;
-    }
-
-    .ant-calendar-time-picker-btn {
-      margin-left: auto;
-      padding: 0 12px;
-      border-radius: 5px;
-      background-color: var(--color-translucent-white-2);
-      color: var(--color-primary-4);
-      line-height: 28px;
-      cursor: pointer;
-
-      .ant-calendar-time-picker-btn-disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-      }
-    }
-
-    .ant-calendar-ok-btn {
-      @extend %typo-button-3;
-      height: 28px;
-      padding: 5px 12px;
-      border: 0;
-      border-radius: 5px;
-      background-color: var(--color-primary-3);
-      color: var(--color-gray-3);
     }
   }
   
-  .ant-calendar {
+  .ant-picker-panel-container {
     width: auto;
     border: 0;
     background: var(--color-gray-8);
     box-shadow: 0 4px 10px rgba(58, 178, 189, 0.5);
 
-    .ant-calendar-input-wrap {
-      height: unset;
-      padding: 0;
-      border-color: var(--color-gray-4);
-      // background-color: var(--color-translucent-2);
-
-      .ant-calendar-input {
-        @extend %typo-body-1;
-        height: 100%;
-        padding: 8px 12px;
-        border-radius: 0;
-        background-color: var(--color-translucent-1);
-        color: var(--color-gray-1);
-  
-        &:placeholder {
-          color: #808080;
-        }
-  
-        &:focus {
-          background-color: var(--color-translucent-2);
-        }
-      }
-    }
-
-    .ant-calendar-date-panel {
+    .ant-picker-date-panel {
       border-radius: 5px;
 
-      .ant-calendar-header {
-        @extend %typo-heading-3;
+      .ant-picker-header {
+        @extend %typo-caption-3;
 
-        .ant-calendar-day-select {
+        button {
+          color: var(--color-gray-4);
+          cursor: pointer;
+        }
+
+        .ant-picker-header-view > button {
           color: var(--color-gray-1);
         }
       }
-
-      .ant-calendar-time-picker {
-        background-color: unset;
-
-        .ant-calendar-time-picker-combobox {
-          border-top: 1px solid var(--color-gray-3);
-          background-color: unset;
-        }
-      }
-
-      .ant-calendar-range-part {
-        &:first-of-type {
-          border-right: 1px solid var(--color-gray-3);
-        }
-      }
-
-      .ant-calendar-time-picker-select {
-        border-bottom: 1px solid var(--color-gray-3);
-        background-color: var(--color-gray-8);
-        color: var(--color-gray-3);
-
-        &:not(:last-child) {
-          border-right: 1px solid var(--color-gray-3);
-        }
-
-        ul {
-          display: flex;
-          flex-direction: column;
-
-          li {
-            @extend %typo-body-1;
-            height: 28px;
-            line-height: 28px;
-
-            &:hover,
-            &:focus {
-              background-color: var(--color-gray-7);
-              color: var(--color-primary-3);
-            }
-          }
-        }
-
-        .ant-calendar-time-picker-select-option-selected {
-          background-color: var(--color-gray-7);
-        }
-      }
     }
 
-    .ant-calendar-time-picker-panel {
-      .ant-calendar-time-picker-inner {
-        border: unset;
-      }
-    }
-
-    .ant-calendar-header {
+    .ant-picker-header {
       border-bottom: 0;
 
-      .ant-calendar-century-select,
-      .ant-calendar-decade-select,
-      .ant-calendar-year-select,
-      .ant-calendar-month-select {
-        color: #fff;
+      .ant-picker-month-btn,
+      .ant-picker-year-btn,
+      .ant-picker-decade-btn,
+      .ant-picker-century-btn {
         pointer-events: none;
       }
     }
 
-    .ant-calendar-body {
+    .ant-picker-body {
       padding-top: 0;
       border-color: var(--color-gray-4);
     }
 
-    .ant-calendar-in-range-cell::before {
-      background: var(--color-gray-6);
-    }
-
-    .ant-calendar-table {
+    .ant-picker-content {
       margin: 0;
 
       thead {
@@ -271,29 +141,34 @@
           cursor: pointer;
         }
       }
-    }
 
-    .ant-calendar-date {
-      @extend %typo-body-1;
-      position: relative;
-      height: auto;
-      color: #fff;
+      .ant-picker-cell {
+        pointer-events: none;
+        
 
-      &:hover {
-        background-color: transparent;
+        &:hover > .ant-picker-cell-inner {
+          border-radius: 50%;
+          padding: 2px;
+          background-color: var(--color-gray-6) !important;
+        }
+        .ant-picker-cell-inner {
+          @extend %typo-body-1;
+          position: relative;
+          height: auto;
+          color: #808080;
+        }
+      }
+
+      .ant-picker-cell-in-view {
+        pointer-events: initial;
+
+        .ant-picker-cell-inner {
+          color: #fff;
+        }
       }
     }
 
-    .ant-calendar-last-month-cell,
-    .ant-calendar-next-month-btn-day {
-      pointer-events: none;
-
-      .ant-calendar-date {
-        color: #808080;
-      }
-    }
-
-    .ant-calendar-today .ant-calendar-date {
+    .ant-picker-cell-today .ant-picker-cell-inner {
       z-index: 1;
       border: 0;
       background-color: transparent;
@@ -309,12 +184,13 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
+        border: none;
         background: var(--color-gray-6);
         transform: translate(-50%, -50%);
       }
     }
 
-    .ant-calendar-selected-day .ant-calendar-date {
+    .ant-picker-cell-selected .ant-picker-cell-inner {
       z-index: 1;
       background-color: transparent;
 
@@ -334,19 +210,10 @@
     }
   }
 
-  .ant-calendar-disabled-cell {
-    .ant-calendar-date {
+  .ant-picker-disabled-cell {
+    .ant-picker-cell-inner {
       background: none;
       color: var(--color-base-gray-5);
     }
-  }
-
-  .ant-calendar-range-right .ant-calendar-date-input-wrap {
-    margin-left: unset;
-  }
-
-  .ant-calendar-range-middle {
-    padding: unset;
-    color: var(--color-text-1);
   }
 }

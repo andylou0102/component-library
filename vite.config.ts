@@ -27,6 +27,7 @@ export function defineViteConfig (isDocs = false) {
       AutoImportPlugin({
         imports: [
           'vue',
+          'vue-i18n',
         ],
         dts: path.join(pathToRootDir, 'src/typings/auto-import.d.ts'),
         eslintrc: {

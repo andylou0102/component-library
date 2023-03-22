@@ -73,7 +73,8 @@ const popoverItems: PopoverItem[] = [
 .popover-content {
   margin-right: 20px;
   padding: 6px 16px;
-  border: 1px solid var(--c-divider);
+  border: 1px solid var(--color-gray-6);
   border-radius: 5px;
+  color: var(--box-shadows-basic);
 }
 </style>

@@ -20,6 +20,7 @@
       overflow: hidden;
       border-radius: 5px;
       background-color: var(--color-gray-8);
+      box-shadow: var(--box-shadows-basic);
     }
 
     &-title,
@@ -37,54 +38,10 @@
 
     &-inner-content {
       @extend %typo-body-3;
-
       padding: 0;
     }
   }
-
-  &.ant-popover-placement {
-    &-top {
-      &,
-      &Left,
-      &Right {
-        > .ant-popover-content > .ant-popover-arrow {
-          border-right-color: var(--color-gray-8);
-          border-bottom-color: var(--color-gray-8);
-        }
-      }
-    }
-
-    &-right {
-      &,
-      &Top,
-      &Bottom {
-        > .ant-popover-content > .ant-popover-arrow {
-          border-bottom-color: var(--color-gray-8);
-          border-left-color: var(--color-gray-8);
-        }
-      }
-    }
-
-    &-bottom {
-      &,
-      &Left,
-      &Right {
-        > .ant-popover-content > .ant-popover-arrow {
-          border-top-color: var(--color-gray-8);
-          border-left-color: var(--color-gray-8);
-        }
-      }
-    }
-
-    &-left {
-      &,
-      &Top,
-      &Bottom {
-        > .ant-popover-content > .ant-popover-arrow {
-          border-top-color: var(--color-gray-8);
-          border-right-color: var(--color-gray-8);
-        }
-      }
-    }
+  .ant-popover-arrow-content {
+    background-color: var(--color-gray-8);
   }
 }

@@ -114,13 +114,11 @@ export default {
       width: 16px;
       height: 16px;
       fill: var(--color-white);
-
     }
   }
 
   &__title {
     @extend %typo-body-2;
-
     flex: 1 1 auto;
     color: var(--color-white);
   }
