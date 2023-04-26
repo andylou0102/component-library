@@ -1,5 +1,5 @@
 # Component Library
-- Setting global component, using it as multi-repo
+- Setting global component base on ant-design-vue, using it as multi-repo
 
 ## Requirements
 - NodeJS: v16.13.2
